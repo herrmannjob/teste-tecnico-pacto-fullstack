@@ -1,0 +1,35 @@
+<div class="container">
+    <h2>{{ isNew ? 'Nova Candidatura' : 'Editar Candidatura' }}</h2>
+    <form (ngSubmit)="saveCandidatura()" #candidaturaForm="ngForm">
+      <div class="form-group">
+        <label for="vagaId">ID da Vaga:</label>
+        <input type="number" id="vagaId" name="vagaId" class="form-control" required [(ngModel)]="candidatura.vagaId" #vagaId="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="nomeCandidato">Nome do Candidato:</label>
+        <input type="text" id="nomeCandidato" name="nomeCandidato" class="form-control" required [(ngModel)]="candidatura.nomeCandidato" #nomeCandidato="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" class="form-control" required [(ngModel)]="candidatura.email" #email="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" class="form-control" [(ngModel)]="candidatura.telefone" #telefone="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="experiencia">Experiência:</label>
+        <textarea id="experiencia" name="experiencia" class="form-control" rows="5" [(ngModel)]="candidatura.experiencia" #experiencia="ngModel"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="status">Status:</label>
+        <select id="status" name="status" class="form-control" required [(ngModel)]="candidatura.status" #status="ngModel">
+          <option value="Pendente">Pendente</option>
+          <option value="Aprovado">Aprovado</option>
+          <option value="Reprovado">Reprovado</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">{{ isNew ? 'Salvar' : 'Atualizar' }}</button>
+    </form>
+  </div>
+  

@@ -1,0 +1,40 @@
+<div class="container">
+  <h2>Listagem de Candidaturas</h2>
+  <div *ngIf="candidaturas.length === 0" class="alert alert-info">
+    Nenhuma candidatura encontrada.
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Vaga ID</th>
+        <th>Nome do Candidato</th>
+        <th>Email</th>
+        <th>Status</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let candidatura of candidaturas">
+        <td>{{ candidatura.id }}</td>
+        <td>{{ candidatura.vagaId }}</td>
+        <td>{{ candidatura.nomeCandidato }}</td>
+        <td>{{ candidatura.email }}</td>
+        <td>{{ candidatura.status }}</td>
+        <td>
+          <a
+            [routerLink]="['/candidaturas', candidatura.id]"
+            class="btn btn-sm btn-primary"
+            >Detalhes</a
+          >
+          <button
+            (click)="deleteCandidatura(candidatura.id)"
+            class="btn btn-sm btn-danger"
+          >
+            Excluir
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

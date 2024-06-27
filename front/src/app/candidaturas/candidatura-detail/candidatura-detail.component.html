@@ -1,0 +1,15 @@
+<div class="container">
+    <h2>Detalhes da Candidatura</h2>
+    <div *ngIf="candidatura" class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ candidatura.nomeCandidato }}</h5>
+        <p class="card-text"><strong>ID da Vaga:</strong> {{ candidatura.vagaId }}</p>
+        <p class="card-text"><strong>Email:</strong> {{ candidatura.email }}</p>
+        <p class="card-text"><strong>Telefone:</strong> {{ candidatura.telefone }}</p>
+        <p class="card-text"><strong>Experiência:</strong></p>
+        <p class="card-text">{{ candidatura.experiencia }}</p>
+        <p class="card-text"><strong>Status:</strong> {{ candidatura.status }}</p>
+      </div>
+    </div>
+  </div>
+  

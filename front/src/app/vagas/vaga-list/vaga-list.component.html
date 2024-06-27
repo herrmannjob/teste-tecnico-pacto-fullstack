@@ -1,0 +1,18 @@
+<div *ngIf="vagas.length > 0 else noVagas">
+    <h2>Listagem de Vagas</h2>
+    <ul class="vagas-list">
+      <li *ngFor="let vaga of vagas" class="vaga-item">
+        <div class="vaga-header">
+          <span class="vaga-titulo">{{ vaga.titulo }}</span>
+        </div>
+        <div class="vaga-descricao">
+          {{ vaga.descricao }}
+        </div>
+      </li>
+    </ul>
+  </div>
+  
+  <ng-template #noVagas>
+    <p>Nenhuma vaga disponível no momento.</p>
+  </ng-template>
+  

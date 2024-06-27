@@ -1,0 +1,25 @@
+/* Estilo para a lista de vagas */
+.vagas-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Estilo para cada item de vaga */
+  .vaga-item {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  /* Estilo para o título da vaga */
+  .vaga-titulo {
+    font-weight: bold;
+  }
+  
+  /* Estilo para a descrição da vaga */
+  .vaga-descricao {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
+  }
+  
